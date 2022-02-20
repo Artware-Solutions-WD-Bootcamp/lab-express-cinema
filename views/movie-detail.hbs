@@ -1,0 +1,20 @@
+<div class="movie-container">
+  <div class="movie-img">
+    <img src="{{response.image}}" alt="{{response.title}} image" width="100px">
+  </div>
+  <div class="movie-text">
+    <a href="/movies">Go back</a>
+    <h2>{{response.title}}</h2>
+    <h3>Director: {{response.director}}</h3>
+    <h4>Stars</h4>
+    <ul>
+      {{#each response.stars}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ul>
+    <p>{{response.description}}</p>
+    {{#each response.showtimes}}
+      {{this}} | 
+    {{/each}}
+  </div>
+</div>
